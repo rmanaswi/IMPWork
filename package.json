@@ -1,0 +1,21 @@
+{
+  "name": "customerapp",
+  "version": "1.0.0",
+  "description": "Simple express app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.5.6",
+    "ejs-lint": "*",
+    "express": "*",
+    "express-validator": "^3.2.0",
+    "mongodb": "^2.2.26",
+    "mongojs": "^2.4.0",
+    "range-parser": "*"
+  },
+  "author": "Manaswi Reddy",
+  "license": "ISC"
+}

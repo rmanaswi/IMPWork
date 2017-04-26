@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Express App</title>
+        <meta http-equiv="refresh" content="15" />
+        <script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+    <body>
+        <h1>Add Customers</h1>
+        <% if(errors){ %>
+  <ul>
+      <% errors.forEach(function(errors){%>
+     <li><%= errors.msg%></li>
+          <%  })%>
+      </ul>
+
+       <% }%>
+        <form method="POST" action="/people/add">
+            <label>First Name</label>
+
+            <br><input type="text" name="first_name"><br>
+            
+            <label>Last Name</label>
+            <br><input type="text" name="last_name">
+            <br>
+            <label>Age</label>
+            <br>
+            <input type="text" name="age">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+            </form>
+        <h1><%= title %></h1>
+        <ul>
+            <% people.forEach(function(people){%>
+     <li><%= people.first_name %>
+         <%= people.last_name %>
+         
+             <%= people.age  %>-<a href="#" class="deleteUser" data-id="<%= people._id %>">Delete</a></li>
+          <%  })%>
+        </ul>
+    </body>
+</html>
